@@ -311,10 +311,7 @@ void TransferListWidget::torrentDoubleClicked()
     case PREVIEW_FILE:
         if (torrentContainsPreviewableFiles(torrent))
         {
-            auto *dialog = new PreviewSelectDialog(this, torrent);
-            dialog->setAttribute(Qt::WA_DeleteOnClose);
-            connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
-            dialog->show();
+            openPreviewSelectDialog(torrent);
         }
         else
         {
@@ -616,10 +613,7 @@ void TransferListWidget::previewSelectedTorrents()
     {
         if (torrentContainsPreviewableFiles(torrent))
         {
-            auto *dialog = new PreviewSelectDialog(this, torrent);
-            dialog->setAttribute(Qt::WA_DeleteOnClose);
-            connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
-            dialog->show();
+            openPreviewSelectDialog(torrent);
         }
         else
         {
@@ -825,21 +819,21 @@ void TransferListWidget::exportTorrent()
         bool hasError = false;
         for (const BitTorrent::Torrent *torrent : torrents)
         {
-            const QString validName = Utils::Fs::toValidFileName(torrent->name(), u"_"_s);
-            const Path filePath = savePath / Path(validName + u".torrent");
-            if (filePath.exists())
+            const QString validName = Utils::Fs::toValidFileName(torrent->name());
+            QString torrentExportFilename = u"%1.torrent"_s.arg(validName);
+            Path newTorrentPath = savePath / Path(torrentExportFilename);
+            int counter = 0;
+            while (newTorrentPath.exists())
             {
-                LogMsg(errorMsg.arg(torrent->name(), filePath.toString(), tr("A file with the same name already exists")) , Log::WARNING);
-                hasError = true;
-                continue;
+                // Append number to torrent name to make it unique
+                torrentExportFilename = u"%1 (%2).torrent"_s.arg(validName).arg(++counter);
+                newTorrentPath = savePath / Path(torrentExportFilename);
             }
 
-            const nonstd::expected<void, QString> result = torrent->exportToFile(filePath);
-            if (!result)
+            if (const nonstd::expected<void, QString> result = torrent->exportToFile(newTorrentPath); !result)
             {
-                LogMsg(errorMsg.arg(torrent->name(), filePath.toString(), result.error()) , Log::WARNING);
+                LogMsg(errorMsg.arg(torrent->name(), newTorrentPath.toString(), result.error()) , Log::WARNING);
                 hasError = true;
-                continue;
             }
         }
 
@@ -1291,9 +1285,16 @@ void TransferListWidget::displayListMenu()
     listMenu->popup(QCursor::pos());
 }
 
-void TransferListWidget::currentChanged(const QModelIndex &current, const QModelIndex&)
+void TransferListWidget::currentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
     qDebug("CURRENT CHANGED");
+
+    // Call base class to ensure Qt's accessibility system is notified of focus changes.
+    // This is critical for screen readers to announce the currently selected torrent.
+    // Without this call, users relying on assistive technologies cannot effectively
+    // navigate the torrent list with keyboard arrow keys.
+    QTreeView::currentChanged(current, previous);
+
     BitTorrent::Torrent *torrent = nullptr;
     if (current.isValid())
     {
@@ -1447,4 +1448,14 @@ void TransferListWidget::wheelEvent(QWheelEvent *event)
     }
 
     QTreeView::wheelEvent(event);  // event delegated to base class
+}
+
+void TransferListWidget::openPreviewSelectDialog(const BitTorrent::Torrent *torrent)
+{
+    auto *dialog = new PreviewSelectDialog(this, torrent);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    // Qt::QueuedConnection is required to prevent a bug on wayland compositors where the preview won't open.
+    // It occurs when the window focus shifts immediately after TransferListWidget::previewFile has been called.
+    connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile, Qt::QueuedConnection);
+    dialog->show();
 }

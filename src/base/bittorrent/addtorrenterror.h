@@ -1,7 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2021  Mike Tzou (Chocobo1)
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2025  Vladimir Golovnev <glassez@yandex.ru>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -29,38 +28,22 @@
 
 #pragma once
 
-#include <QObject>
+#include <QMetaType>
 #include <QString>
-#include <QUrl>
 
-namespace Net
+namespace BitTorrent
 {
-    struct DownloadResult;
+    struct AddTorrentError
+    {
+        enum Kind
+        {
+            DuplicateTorrent,
+            Other
+        };
+
+        Kind kind = Other;
+        QString message;
+    };
 }
 
-class ProgramUpdater final : public QObject
-{
-    Q_OBJECT
-    Q_DISABLE_COPY_MOVE(ProgramUpdater)
-
-public:
-    using QObject::QObject;
-
-    void checkForUpdates() const;
-    QString getNewVersion() const;
-    QString getNewContent() const;
-    QString getNextUpdate() const;
-    bool updateProgram() const;
-
-signals:
-    void updateCheckFinished();
-
-private slots:
-    void rssDownloadFinished(const Net::DownloadResult &result);
-
-private:
-    QString m_newVersion;
-    QString m_nextUpdate;
-    QString m_content;
-    QUrl m_updateURL;
-};
+Q_DECLARE_METATYPE(BitTorrent::AddTorrentError)

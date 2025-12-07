@@ -130,11 +130,11 @@
     </message>
     <message>
         <source>Start torrents</source>
-        <translation type="unfinished" />
+        <translation>ابدأ تورنتات</translation>
     </message>
     <message>
         <source>Stop torrents</source>
-        <translation type="unfinished" />
+        <translation>أوقف تورنتات</translation>
     </message>
 </context>
 <context>
@@ -190,14 +190,6 @@
     <message>
         <source>Unknown</source>
         <translation>غير معروف</translation>
-    </message>
-    <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>يجب أن يكون حد نسبة المشاركة بين 0 و9998.</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>يجب أن يكون الحد الزمني للبذر بين 0 و525600 دقيقة.</translation>
     </message>
     <message>
         <source>Apply</source>
@@ -441,6 +433,14 @@
     </message>
     <message>
         <source>Add web seeds</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -1885,7 +1885,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Dark</source>
-        <translation type="unfinished" />
+        <translation>داكن</translation>
     </message>
     <message>
         <source>Delete files permanently</source>
@@ -1917,7 +1917,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Light</source>
-        <translation type="unfinished" />
+        <translation>فاتح</translation>
     </message>
     <message>
         <source>Automatically append these trackers to new downloads:</source>
@@ -1933,7 +1933,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Send test email</source>
-        <translation type="unfinished" />
+        <translation>أرسل بريد تجريبي</translation>
     </message>
     <message>
         <source>Completed torrents:</source>
@@ -1981,7 +1981,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Stop torrent</source>
-        <translation type="unfinished" />
+        <translation>أوقف التورنت</translation>
     </message>
     <message>
         <source>Use Category paths in Manual Mode</source>
@@ -2457,7 +2457,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Private:</source>
-        <translation type="unfinished" />
+        <translation>خاص:</translation>
     </message>
 </context>
 <context>
@@ -2689,11 +2689,11 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Start torrents</source>
-        <translation type="unfinished" />
+        <translation>ابدأ تورنتات</translation>
     </message>
     <message>
         <source>Stop torrents</source>
-        <translation type="unfinished" />
+        <translation>أوقف تورنتات</translation>
     </message>
 </context>
 <context>
@@ -2848,7 +2848,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Private</source>
-        <translation type="unfinished" />
+        <translation>خاص</translation>
     </message>
     <message>
         <source>Progress</source>
@@ -3645,11 +3645,11 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Engine URL</source>
-        <translation type="unfinished" />
+        <translation>رابط المحرك</translation>
     </message>
     <message>
         <source>Engine</source>
-        <translation type="unfinished" />
+        <translation>المحرك</translation>
     </message>
 </context>
 <context>
@@ -3734,11 +3734,11 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Start torrents</source>
-        <translation type="unfinished" />
+        <translation>ابدأ تورنتات</translation>
     </message>
     <message>
         <source>Stop torrents</source>
-        <translation type="unfinished" />
+        <translation>أوقف تورنتات</translation>
     </message>
 </context>
 <context>
@@ -4304,7 +4304,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <source>Start torrents</source>
-        <translation type="unfinished" />
+        <translation>ابدأ تورنتات</translation>
     </message>
     <message>
         <source>Remove tracker</source>
@@ -4312,7 +4312,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <source>Stop torrents</source>
-        <translation type="unfinished" />
+        <translation>أوقف تورنتات</translation>
     </message>
 </context>
 <context>

@@ -192,14 +192,6 @@
         <translation>未知</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>分享速率限制必須在 0 到 9998 之間。</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>做種時間限制必須在 0 到 525600 分鐘之間。</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>套用</translation>
     </message>
@@ -442,6 +434,14 @@
     <message>
         <source>Add web seeds</source>
         <translation>新增 web 種子</translation>
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation>分享速率限制不能為負值。</translation>
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
+        <translation>做種時間限制不能為負值。</translation>
     </message>
 </context>
 <context>

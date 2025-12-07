@@ -192,14 +192,6 @@
         <translation>Άγνωστο</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>Το όριο αναλογίας διαμοιρασμού πρέπει να είναι μεταξύ 0 και 9998.</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Το χρονικό όριο seeding πρέπει να είναι μεταξύ 0 και 525600 λεπτών.</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>Εφαρμογή</translation>
     </message>
@@ -373,7 +365,7 @@
     </message>
     <message>
         <source>External IP: N/A</source>
-        <translation type="unfinished" />
+        <translation>Εξωτερική IP: Δ/Υ</translation>
     </message>
     <message>
         <source>Reverse proxy setup examples</source>
@@ -401,7 +393,7 @@
     </message>
     <message>
         <source>External IP: %1%2</source>
-        <translation type="unfinished" />
+        <translation>Εξωτερική IP: %1%2</translation>
     </message>
     <message>
         <source>Edit web seed</source>
@@ -425,7 +417,7 @@
     </message>
     <message>
         <source>External IPs: %1, %2</source>
-        <translation type="unfinished" />
+        <translation>Εξωτερικές IP: %1, %2</translation>
     </message>
     <message>
         <source>Unable to recheck torrents.</source>
@@ -441,6 +433,14 @@
     </message>
     <message>
         <source>Add web seeds</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -3306,7 +3306,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Add tags</source>
-        <translation type="unfinished" />
+        <translation>Προσθήκη ετικετών</translation>
     </message>
     <message>
         <source>Category:</source>

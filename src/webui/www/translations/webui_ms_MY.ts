@@ -192,14 +192,6 @@
         <translation>Tidak diketahui</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>Had nisbah kongsi mesti diantara 0 hingga 9998.</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Had masa penyemaian mesti diantara 0 hingga 525600 minit.</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>Laksana</translation>
     </message>
@@ -441,6 +433,14 @@
     </message>
     <message>
         <source>Add web seeds</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
         <translation type="unfinished" />
     </message>
 </context>

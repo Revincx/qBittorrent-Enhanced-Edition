@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2021  Mike Tzou (Chocobo1)
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2025  bolshoytoster <toasterbig@gmail.com>
+ * Copyright (C) 2025  Mike Tzou (Chocobo1)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -27,40 +27,46 @@
  * exception statement from your version.
  */
 
-#pragma once
+"use strict";
 
-#include <QObject>
-#include <QString>
-#include <QUrl>
+window.qBittorrent ??= {};
+window.qBittorrent.MonkeyPatch ??= (() => {
+    const exports = () => {
+        return {
+            patch: patch
+        };
+    };
 
-namespace Net
-{
-    struct DownloadResult;
-}
+    const patch = () => {
+        patchMootoolsDocumentId();
+    };
 
-class ProgramUpdater final : public QObject
-{
-    Q_OBJECT
-    Q_DISABLE_COPY_MOVE(ProgramUpdater)
+    const patchMootoolsDocumentId = () => {
+        // Override MooTools' `document.id` (used for `$(id)`), which prevents it
+        // from allocating a `uniqueNumber` for elements that don't need it.
+        // MooTools and MochaUI use it internally.
 
-public:
-    using QObject::QObject;
+        if (document.id === undefined)
+            return;
 
-    void checkForUpdates() const;
-    QString getNewVersion() const;
-    QString getNewContent() const;
-    QString getNextUpdate() const;
-    bool updateProgram() const;
+        document.id = (el) => {
+            if ((el === null) || (el === undefined))
+                return null;
 
-signals:
-    void updateCheckFinished();
+            switch (typeof el) {
+                case "object":
+                    return el;
+                case "string":
+                    return document.getElementById(el);
+            }
 
-private slots:
-    void rssDownloadFinished(const Net::DownloadResult &result);
+            return null;
+        };
+    };
 
-private:
-    QString m_newVersion;
-    QString m_nextUpdate;
-    QString m_content;
-    QUrl m_updateURL;
-};
+    return exports();
+})();
+Object.freeze(window.qBittorrent.MonkeyPatch);
+
+// execute now
+window.qBittorrent.MonkeyPatch.patch();

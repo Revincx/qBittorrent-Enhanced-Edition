@@ -192,14 +192,6 @@
         <translation>Unknown</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>Share ratio limit must be between 0 and 9998.</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Seeding time limit must be between 0 and 525600 minutes.</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>Apply</translation>
     </message>
@@ -442,6 +434,14 @@
     <message>
         <source>Add web seeds</source>
         <translation>Add web seeds</translation>
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>

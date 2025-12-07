@@ -52,15 +52,15 @@
     </message>
     <message>
         <source>Metadata received</source>
-        <translation type="unfinished" />
+        <translation>მეტაინფორმაცია მიღებულია</translation>
     </message>
     <message>
         <source>Files checked</source>
-        <translation type="unfinished" />
+        <translation>ფაილები შემოწმებულია</translation>
     </message>
     <message>
         <source>Stop condition:</source>
-        <translation type="unfinished" />
+        <translation>შეჩერების პირობა</translation>
     </message>
     <message>
         <source>None</source>
@@ -68,7 +68,7 @@
     </message>
     <message>
         <source>Add to top of queue</source>
-        <translation type="unfinished" />
+        <translation>რიგის თავში დამატება</translation>
     </message>
     <message>
         <source>One link per line (HTTP links, Magnet links and info-hashes are supported)</source>
@@ -190,14 +190,6 @@
     <message>
         <source>Unknown</source>
         <translation>უცნობია</translation>
-    </message>
-    <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation type="unfinished" />
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>სიდირების დროის ლიმიტი უნდა იყოს 0-დან 525600-მდე წუთი.</translation>
     </message>
     <message>
         <source>Apply</source>
@@ -441,6 +433,14 @@
     </message>
     <message>
         <source>Add web seeds</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -1601,7 +1601,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Files checked</source>
-        <translation type="unfinished" />
+        <translation>ფაილები შემოწმებულია</translation>
     </message>
     <message>
         <source>Enable port forwarding for embedded tracker:</source>
@@ -1613,7 +1613,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Metadata received</source>
-        <translation type="unfinished" />
+        <translation>მეტაინფორმაცია მიღებულია</translation>
     </message>
     <message>
         <source>Torrent stop condition:</source>
@@ -1701,7 +1701,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Add to top of queue</source>
-        <translation type="unfinished" />
+        <translation>რიგის თავში დამატება</translation>
     </message>
     <message>
         <source>Stop tracker timeout [0: disabled]:</source>

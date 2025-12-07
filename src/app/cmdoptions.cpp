@@ -147,12 +147,14 @@ namespace
 
         QString value(const QString &arg) const
         {
-            QStringList parts = arg.split(u'=');
-            if (parts.size() == 2)
-                return Utils::String::unquote(parts[1], u"'\""_s);
-            throw CommandLineParameterError(QCoreApplication::translate("CMD Options", "Parameter '%1' must follow syntax '%1=%2'",
+            const qsizetype index = arg.indexOf(u'=');
+            if (index == -1)
+                throw CommandLineParameterError(QCoreApplication::translate("CMD Options", "Parameter '%1' must follow syntax '%1=%2'",
                                                         "e.g. Parameter '--webui-port' must follow syntax '--webui-port=value'")
                                             .arg(fullParameter(), u"<value>"_s));
+
+            const QStringView val = QStringView(arg).sliced(index + 1);
+            return Utils::String::unquote(val, u"'\""_s).toString();
         }
 
         QString value(const QProcessEnvironment &env, const QString &defaultValue = {}) const
@@ -168,7 +170,7 @@ namespace
 
         friend bool operator==(const StringOption &option, const QString &arg)
         {
-            return arg.startsWith(option.parameterAssignment());
+            return (arg == option.fullParameter()) || arg.startsWith(option.parameterAssignment());
         }
 
     private:
@@ -491,6 +493,12 @@ QString makeUsage(const QString &prgName)
 {
     const QString indentation {USAGE_INDENTATION, u' '};
 
+#if defined(Q_OS_WIN)
+    const QString noSplashCommand = u"set QBT_NO_SPLASH=1 && " + prgName;
+#else
+    const QString noSplashCommand = u"QBT_NO_SPLASH=1 " + prgName;
+#endif
+
     const QString text = QCoreApplication::translate("CMD Options", "Usage:") + u'\n'
         + indentation + prgName + u' ' + QCoreApplication::translate("CMD Options", "[options] [(<filename> | <url>)...]") + u'\n'
 
@@ -542,7 +550,7 @@ QString makeUsage(const QString &prgName)
                                 "'parameter-name', environment variable name is 'QBT_PARAMETER_NAME' (in upper "
                                 "case, '-' replaced with '_'). To pass flag values, set the variable to '1' or "
                                 "'TRUE'. For example, to disable the splash screen: "), 0) + u'\n'
-        + u"QBT_NO_SPLASH=1 " + prgName + u'\n'
+        + noSplashCommand + u'\n'
         + wrapText(QCoreApplication::translate("CMD Options", "Command line parameters take precedence over environment variables"), 0) + u'\n';
 
     return text;
