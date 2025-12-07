@@ -192,14 +192,6 @@
         <translation>Okänd</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>Gräns för delningskvot måste vara mellan 0 och 9998.</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Distributionstidsgränsen måste vara mellan 0 och 525600 minuter.</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>Verkställ</translation>
     </message>
@@ -381,7 +373,7 @@
     </message>
     <message>
         <source>Could not contact qBittorrent</source>
-        <translation>Kunde inte kontakta qBittorrent</translation>
+        <translation>Det gick inte att kontakta qBittorrent</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -442,6 +434,14 @@
     <message>
         <source>Add web seeds</source>
         <translation>Lägg till webbdistributioner</translation>
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation>Gränsen för utdelningskvot får inte ha ett negativt värde.</translation>
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
+        <translation>Gräns för distributionstid får inte ha ett negativt värde.</translation>
     </message>
 </context>
 <context>
@@ -989,7 +989,7 @@
     </message>
     <message>
         <source>Do not count slow torrents in these limits</source>
-        <translation>Räkna inte långsamma torrenter med de här gränserna</translation>
+        <translation>Räkna inte långsamma torrenter med dessa gränser</translation>
     </message>
     <message>
         <source>then</source>
@@ -1065,7 +1065,7 @@
     </message>
     <message>
         <source>Enable clickjacking protection</source>
-        <translation>Aktivera skydd för clickjacking</translation>
+        <translation>Aktivera skydd mot klickkapning</translation>
     </message>
     <message>
         <source>Enable Cross-Site Request Forgery (CSRF) protection</source>
@@ -1453,7 +1453,7 @@
     </message>
     <message>
         <source>Type of service (ToS) for connections to peers</source>
-        <translation>Typ av tjänst (TOS) för anslutningar till jämlikar</translation>
+        <translation>Typ av tjänst (ToS) för anslutningar till jämlikar</translation>
     </message>
     <message>
         <source>Outgoing connections per second:</source>
@@ -1553,7 +1553,7 @@
     </message>
     <message>
         <source>Max concurrent HTTP announces:</source>
-        <translation>Maximalt antal samtidiga HTTP-annonseringar:</translation>
+        <translation>Högst antal samtidiga HTTP-annonseringar:</translation>
     </message>
     <message>
         <source>Enable OS cache</source>
@@ -1737,7 +1737,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Python executable path (may require restart):</source>
-        <translation>Python körbar sökväg (kan kräva omstart):</translation>
+        <translation>Sökväg till körbar Python-fil (kan kräva omstart):</translation>
     </message>
     <message>
         <source>Resets to default if empty</source>
@@ -1765,7 +1765,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>.torrent file size limit:</source>
-        <translation>.torrent-filstorleksgräns:</translation>
+        <translation>Storleksgräns för .torrent-filer:</translation>
     </message>
     <message>
         <source>(Auto detect if empty)</source>
@@ -1785,11 +1785,11 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>I2P outbound quantity:</source>
-        <translation>I2P utgående kvantitet:</translation>
+        <translation>I2P utgående mängd:</translation>
     </message>
     <message>
         <source>I2P inbound quantity:</source>
-        <translation>I2P inkommande kvantitet:</translation>
+        <translation>I2P inkommande mängd:</translation>
     </message>
     <message>
         <source>Hashing threads:</source>
@@ -1857,7 +1857,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Same host request delay:</source>
-        <translation>Samma fördröjning av värdbegäran:</translation>
+        <translation>Fördröjning av samma värdförfrågan:</translation>
     </message>
     <message>
         <source>Customize application instance name:</source>
@@ -1973,7 +1973,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Torrent content removing mode:</source>
-        <translation>Torrent-innehåll borttagningsläge:</translation>
+        <translation>Läge för borttagning av torrentinnehåll:</translation>
     </message>
     <message>
         <source>Move files to trash (if possible)</source>
@@ -2193,7 +2193,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>ETA:</source>
-        <translation>Slutförs:</translation>
+        <translation>Slutförs om:</translation>
     </message>
     <message>
         <source>Uploaded:</source>
@@ -2245,7 +2245,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Reannounce In:</source>
-        <translation>Annonsera igen om:</translation>
+        <translation>Annonseras igen om:</translation>
     </message>
     <message>
         <source>Last Seen Complete:</source>
@@ -2261,7 +2261,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Created By:</source>
-        <translation>Skapades av:</translation>
+        <translation>Skapad av:</translation>
     </message>
     <message>
         <source>Added On:</source>
@@ -2269,11 +2269,11 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Completed On:</source>
-        <translation>Slutfördes:</translation>
+        <translation>Slutförd:</translation>
     </message>
     <message>
         <source>Created On:</source>
-        <translation>Skapades:</translation>
+        <translation>Skapad:</translation>
     </message>
     <message>
         <source>Save Path:</source>
@@ -2429,7 +2429,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Ratio / Time Active (in months), indicates how popular the torrent is</source>
-        <translation>Förhållande / Aktiv tid (i månader), indikerar hur populär torrenten är</translation>
+        <translation>Kvot / aktiv tid (i månader), indikerar hur populär torrenten är</translation>
     </message>
     <message>
         <source>Popularity:</source>
@@ -2673,11 +2673,11 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Stopped (0)</source>
-        <translation>Stoppad (0)</translation>
+        <translation>Stoppade (0)</translation>
     </message>
     <message>
         <source>Stopped (%1)</source>
-        <translation>Stoppad (%1)</translation>
+        <translation>Stoppade (%1)</translation>
     </message>
     <message>
         <source>Running (%1)</source>
@@ -2744,7 +2744,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     <message>
         <source>ETA</source>
         <comment>i.e: Estimated Time of Arrival / Time left</comment>
-        <translation>Slutförs</translation>
+        <translation>Slutförs om</translation>
     </message>
     <message>
         <source>Category</source>
@@ -2762,7 +2762,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     <message>
         <source>Completed On</source>
         <comment>Torrent was completed on 01/01/2010 08:00</comment>
-        <translation>Slutfördes</translation>
+        <translation>Slutförd</translation>
     </message>
     <message>
         <source>Tracker</source>
@@ -2844,7 +2844,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Reannounce In</source>
-        <translation>Annonsera igen om</translation>
+        <translation>Annonseras igen om</translation>
     </message>
     <message>
         <source>Private</source>
@@ -2923,7 +2923,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Not working</source>
-        <translation>Fungerar inte</translation>
+        <translation>Arbetar inte</translation>
     </message>
     <message>
         <source>Copy tracker URL</source>
@@ -2975,7 +2975,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Times Downloaded</source>
-        <translation>Gånger hämtad</translation>
+        <translation>Antal hämtningar</translation>
     </message>
     <message>
         <source>Add trackers...</source>
@@ -3575,7 +3575,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Max size prefix</source>
-        <translation>Max storlek prefix </translation>
+        <translation>Maxstorlek prefix </translation>
     </message>
     <message>
         <source>Select plugins</source>
@@ -3610,7 +3610,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Warning: Be sure to comply with your country's copyright laws when downloading torrents from any of these search engines.</source>
-        <translation>Varning: Var noga med att följa ditt lands upphovsrättslagar när du hämtar torrenter från någon av de här sökmotorerna.</translation>
+        <translation>Varning: Var noga med att följa ditt lands upphovsrättslagar när du hämtar torrenter från någon av dessa sökmotorer.</translation>
     </message>
     <message>
         <source>Check for updates</source>
@@ -3645,7 +3645,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Engine URL</source>
-        <translation>Motorns webbadress</translation>
+        <translation>Motor-URL</translation>
     </message>
     <message>
         <source>Engine</source>
@@ -3992,7 +3992,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Please type a RSS feed URL</source>
-        <translation>Skriv en RSS-flödets URL</translation>
+        <translation>Ange en URL för RSS-flödet</translation>
     </message>
     <message>
         <source>Fetching of RSS feeds is disabled now! You can enable it in application settings.</source>
@@ -4159,7 +4159,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Please type the new rule name</source>
-        <translation>Skriv det nya regelnamnet</translation>
+        <translation>Ange det nya regelnamnet</translation>
     </message>
     <message>
         <source>Rule renaming</source>
@@ -4219,7 +4219,7 @@ Använd ";" för att dela upp i flera poster. Du kan använda jokertecknet "*".<
     </message>
     <message>
         <source>Please type the name of the new download rule.</source>
-        <translation>Skriv namnet på den nya hämtningsregeln.</translation>
+        <translation>Ange namnet på den nya hämtningsregeln.</translation>
     </message>
     <message>
         <source>Wildcard mode: you can use</source>

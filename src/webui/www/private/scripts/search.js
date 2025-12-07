@@ -248,7 +248,7 @@ window.qBittorrent.Search ??= (() => {
         if (state && state.running)
             stopSearch(searchId);
 
-        tab.destroy();
+        tab.remove();
 
         fetch("api/v2/search/delete", {
             method: "POST",
@@ -773,7 +773,7 @@ window.qBittorrent.Search ??= (() => {
         $("numSearchResultsVisible").textContent = searchResultsTable.getFilteredAndSortedRows().length;
     };
 
-    const loadSearchResultsData = function(searchId) {
+    const loadSearchResultsData = (searchId) => {
         const state = searchState.get(searchId);
         const url = new URL("api/v2/search/results", window.location);
         url.search = new URLSearchParams({

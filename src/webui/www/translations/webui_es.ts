@@ -192,14 +192,6 @@
         <translation>Desconocido</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>El limite de ratio debe estar entre 0 y 9998</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>El limite de tiempo de sembrado debe estar entre 0 y 525600 minutos.</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
@@ -442,6 +434,14 @@
     <message>
         <source>Add web seeds</source>
         <translation>Añadir semillas web</translation>
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation>El límite de ratio de acciones no debe tener un valor negativo.</translation>
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
+        <translation>El límite de tiempo de siembra no debe tener un valor negativo.</translation>
     </message>
 </context>
 <context>
@@ -1997,11 +1997,11 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Port reported to trackers (requires restart) [0: listening port]:</source>
-        <translation type="unfinished" />
+        <translation>Puerto informado a los rastreadores (requiere reinicio) [0: puerto de escucha]:</translation>
     </message>
     <message>
         <source>User interface language:</source>
-        <translation type="unfinished" />
+        <translation>Idioma de la interfaz de usuario:</translation>
     </message>
     <message>
         <source>Merge trackers to existing torrent</source>
@@ -2009,15 +2009,15 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Confirm torrent recheck:</source>
-        <translation type="unfinished" />
+        <translation>Confirmar la nueva comprobación del torrent:</translation>
     </message>
     <message>
         <source>Custom WebUI settings</source>
-        <translation type="unfinished" />
+        <translation>Configuración de interfaz web personalizada</translation>
     </message>
     <message>
         <source>Following settings are WebUI only</source>
-        <translation type="unfinished" />
+        <translation>Las siguientes configuraciones son solo para la interfaz web</translation>
     </message>
     <message>
         <source>Simple pread/pwrite</source>
@@ -2041,7 +2041,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Log Files</source>
-        <translation type="unfinished" />
+        <translation>Archivos de Registro</translation>
     </message>
 </context>
 <context>
@@ -2413,7 +2413,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Replace option</source>
-        <translation type="unfinished" />
+        <translation>Opción de reemplazo</translation>
     </message>
     <message>
         <source>Edit web seed URL...</source>
@@ -2437,7 +2437,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Apply to which filename part</source>
-        <translation type="unfinished" />
+        <translation>¿A qué parte del nombre de archivo se aplica?</translation>
     </message>
     <message>
         <source>No</source>
@@ -2453,7 +2453,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Add web seeds...</source>
-        <translation type="unfinished" />
+        <translation>Añadir semillas web...</translation>
     </message>
     <message>
         <source>Private:</source>
@@ -2872,7 +2872,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Status Icon</source>
-        <translation type="unfinished" />
+        <translation>Icono de estado</translation>
     </message>
 </context>
 <context>
@@ -3105,7 +3105,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Collapse/expand category</source>
-        <translation type="unfinished" />
+        <translation>Contraer/expandir categoría</translation>
     </message>
 </context>
 <context>
@@ -3286,7 +3286,7 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Location:</source>
-        <translation type="unfinished" />
+        <translation>Ubicación:</translation>
     </message>
     <message>
         <source>Stop</source>
@@ -3563,11 +3563,11 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Select category</source>
-        <translation type="unfinished" />
+        <translation>Seleccionar categoría</translation>
     </message>
     <message>
         <source>Min size prefix</source>
-        <translation type="unfinished" />
+        <translation>Prefijo de tamaño mínimo</translation>
     </message>
     <message>
         <source>Start a search above.</source>
@@ -3575,11 +3575,11 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Max size prefix</source>
-        <translation type="unfinished" />
+        <translation>Prefijo de tamaño máximo</translation>
     </message>
     <message>
         <source>Select plugins</source>
-        <translation type="unfinished" />
+        <translation>Seleccionar plugins</translation>
     </message>
 </context>
 <context>
@@ -4020,15 +4020,15 @@ Use ';' para dividir múltiples entradas. Puede usar el comodin '*'.</translatio
     </message>
     <message>
         <source>Unable to update URL</source>
-        <translation type="unfinished" />
+        <translation>No se puede actualizar la URL</translation>
     </message>
     <message>
         <source>URL is unchanged</source>
-        <translation type="unfinished" />
+        <translation>La URL no ha cambiado</translation>
     </message>
     <message>
         <source>URL cannot be empty</source>
-        <translation type="unfinished" />
+        <translation>La URL no puede estar vacía</translation>
     </message>
 </context>
 <context>
@@ -4277,11 +4277,11 @@ Admite los formatos: S01E01, 1x1, 2017.12.31 y 31.12.2017 (los formatos de fecha
     </message>
     <message>
         <source>Remove rule</source>
-        <translation type="unfinished" />
+        <translation>Eliminar regla</translation>
     </message>
     <message>
         <source>Add rule</source>
-        <translation type="unfinished" />
+        <translation>Añadir regla</translation>
     </message>
     <message>
         <source>Add Stopped:</source>
@@ -4465,7 +4465,7 @@ Admite los formatos: S01E01, 1x1, 2017.12.31 y 31.12.2017 (los formatos de fecha
     <name>TrackersFilterWidget</name>
     <message>
         <source>Are you sure you want to remove tracker %1 from all torrents?</source>
-        <translation type="unfinished" />
+        <translation>¿Estás seguro de que quieres eliminar el rastreador "%1" de todos los torrents?</translation>
     </message>
 </context>
 <context>
@@ -4484,7 +4484,7 @@ Admite los formatos: S01E01, 1x1, 2017.12.31 y 31.12.2017 (los formatos de fecha
     </message>
     <message>
         <source>Unable to set category</source>
-        <translation type="unfinished" />
+        <translation>No se pudo establecer la categoría</translation>
     </message>
 </context>
 <context>
@@ -4499,7 +4499,7 @@ Admite los formatos: S01E01, 1x1, 2017.12.31 y 31.12.2017 (los formatos de fecha
     </message>
     <message>
         <source>Add Cookie</source>
-        <translation type="unfinished" />
+        <translation>Añadir Cookie</translation>
     </message>
     <message>
         <source>Remove</source>
@@ -4555,7 +4555,7 @@ Admite los formatos: S01E01, 1x1, 2017.12.31 y 31.12.2017 (los formatos de fecha
     <name>Login</name>
     <message>
         <source>qBittorrent WebUI</source>
-        <translation type="unfinished" />
+        <translation>Interfaz web de qBittorrent</translation>
     </message>
     <message>
         <source>Password</source>
@@ -4571,11 +4571,11 @@ Admite los formatos: S01E01, 1x1, 2017.12.31 y 31.12.2017 (los formatos de fecha
     </message>
     <message>
         <source>Server response:</source>
-        <translation type="unfinished" />
+        <translation>Respuesta del servidor:</translation>
     </message>
     <message>
         <source>Unable to log in, server is probably unreachable.</source>
-        <translation type="unfinished" />
+        <translation>No se puede iniciar sesión, probablemente el servidor no esté disponible.</translation>
     </message>
     <message>
         <source>Username</source>

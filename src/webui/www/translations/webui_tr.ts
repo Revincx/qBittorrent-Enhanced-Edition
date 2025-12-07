@@ -192,14 +192,6 @@
         <translation>Bilinmiyor</translation>
     </message>
     <message>
-        <source>Share ratio limit must be between 0 and 9998.</source>
-        <translation>Paylaşma oranı sınırı 0 ve 9998 arasında olmak zorundadır.</translation>
-    </message>
-    <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Gönderim süresi sınırı 0 ve 525600 dakika arasında olmak zorundadır.</translation>
-    </message>
-    <message>
         <source>Apply</source>
         <translation>Uygula</translation>
     </message>
@@ -443,6 +435,14 @@
         <source>Add web seeds</source>
         <translation>Web gönderimleri ekle</translation>
     </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation>Paylaşım oranı sınırı negatif bir değer olmamak zorundadır.</translation>
+    </message>
+    <message>
+        <source>Seeding time limit must not have a negative value.</source>
+        <translation>Gönderim süresi sınırı negatif bir değer olmamak zorundadır.</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -540,7 +540,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation>Ara</translation>
+        <translation>Arama</translation>
     </message>
     <message>
         <source>Transfers</source>
@@ -1361,7 +1361,7 @@
     </message>
     <message>
         <source>Enable fetching RSS feeds</source>
-        <translation>RSS bildirimlerini almayı etkinleştir</translation>
+        <translation>RSS bildirimlerini getirmeyi etkinleştir</translation>
     </message>
     <message>
         <source>Peer turnover threshold percentage:</source>
@@ -3996,7 +3996,7 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     </message>
     <message>
         <source>Fetching of RSS feeds is disabled now! You can enable it in application settings.</source>
-        <translation>RSS bildirimlerinin alınması şimdi etkisizleştirildi! Uygulama ayarlarından etkinleştirebilirsiniz.</translation>
+        <translation>RSS bildirimlerinin getirilmesi şimdi etkisizleştirildi! Uygulama ayarlarından etkinleştirebilirsiniz.</translation>
     </message>
     <message>
         <source>Deletion confirmation</source>
